@@ -1,0 +1,11 @@
+// Place your key bindings in this file to override the defaults
+// Ctrl P => keybind to edit keybindings.json
+[
+    {
+      "key": "ctrl+'",
+      "command": "workbench.action.tasks.runTask",
+      "when": "editorTextFocus",
+      "args": "run tests"
+    }
+  ]
+  
