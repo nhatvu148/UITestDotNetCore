@@ -60,7 +60,9 @@ namespace UITest1
         public static string GetConfiguration(string key)
         {
             // return ConfigurationManager.AppSettings[Environment.MachineName + "." + key] ?? ConfigurationManager.AppSettings[key];
-            return appSettings.ContainsKey(Environment.MachineName + "." + key) ? appSettings[Environment.MachineName + "." + key] : appSettings[key];
+            bool keyExists = appSettings.TryGetValue(Environment.MachineName + "." + key, out string value);
+            // return appSettings.ContainsKey(Environment.MachineName + "." + key) ? appSettings[Environment.MachineName + "." + key] : appSettings[key];
+            return keyExists ? value : appSettings[key];
         }
     }
 }
