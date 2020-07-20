@@ -6544,19 +6544,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nhatv\\.nuget\\packages\\": {}
+    "C:\\Users\\TechnoStar\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nhatv\\Work\\TechnoStar\\UITest1\\UITest1.csproj",
+      "projectUniqueName": "D:\\AKIYAMA\\WinAppDriverTest\\UITestDotNetCore\\UITest1.csproj",
       "projectName": "UITest1",
-      "projectPath": "C:\\Users\\nhatv\\Work\\TechnoStar\\UITest1\\UITest1.csproj",
-      "packagesPath": "C:\\Users\\nhatv\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nhatv\\Work\\TechnoStar\\UITest1\\obj\\",
+      "projectPath": "D:\\AKIYAMA\\WinAppDriverTest\\UITestDotNetCore\\UITest1.csproj",
+      "packagesPath": "C:\\Users\\TechnoStar\\.nuget\\packages\\",
+      "outputPath": "D:\\AKIYAMA\\WinAppDriverTest\\UITestDotNetCore\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\nhatv\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\TechnoStar\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
