@@ -18,8 +18,9 @@ namespace UITest1
                 {
                     process.Kill();
                 }
-                
-                Setup("C:\\Program Files\\TechnoStar\\Jupiter-Pre_4.1.3\\DCAD_main.exe");
+                logger.Info(GetConfiguration("DCAD_Path"));
+
+                Setup(GetConfiguration("DCAD_Path"));
                 objTestContext = testContext;
             }
         }
@@ -41,7 +42,7 @@ namespace UITest1
                 }
 
                 Thread.Sleep(4000);
-                Setup("C:\\Program Files\\TechnoStar\\Jupiter-Pre_4.1.3\\DCAD_main.exe");
+                Setup(GetConfiguration("DCAD_Path"));
             }
 
             wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(50));

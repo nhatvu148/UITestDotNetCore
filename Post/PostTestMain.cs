@@ -18,8 +18,9 @@ namespace UITest1
                 {
                     process.Kill();
                 }
+                logger.Info(GetConfiguration("PCAD_Path"));
 
-                Setup("C:\\Program Files\\TechnoStar\\Jupiter-Post_4.1.3\\PCAD_main.exe");
+                Setup(GetConfiguration("PCAD_Path"));
                 objTestContext = testContext;
             }
         }
@@ -41,7 +42,7 @@ namespace UITest1
                 }
 
                 Thread.Sleep(4000);
-                Setup("C:\\Program Files\\TechnoStar\\Jupiter-Post_4.1.3\\PCAD_main.exe");
+                Setup(GetConfiguration("PCAD_Path"));
             }
             wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(50));
             Assert.IsNotNull(wait);

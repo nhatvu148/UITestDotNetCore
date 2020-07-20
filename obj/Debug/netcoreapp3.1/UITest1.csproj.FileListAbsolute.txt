@@ -451,9 +451,6 @@ D:\AKIYAMA\WinAppDriverTest\UITestDotNetCore\bin\Debug\netcoreapp3.1\zh-Hans\Mic
 D:\AKIYAMA\WinAppDriverTest\UITestDotNetCore\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
 D:\AKIYAMA\WinAppDriverTest\UITestDotNetCore\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
 D:\AKIYAMA\WinAppDriverTest\UITestDotNetCore\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-D:\AKIYAMA\WinAppDriverTest\UITestDotNetCore\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\Microsoft.Win32.SystemEvents.dll
-D:\AKIYAMA\WinAppDriverTest\UITestDotNetCore\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Drawing.Common.dll
-D:\AKIYAMA\WinAppDriverTest\UITestDotNetCore\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Drawing.Common.dll
 D:\AKIYAMA\WinAppDriverTest\UITestDotNetCore\obj\Debug\netcoreapp3.1\UITest1.csprojAssemblyReference.cache
 D:\AKIYAMA\WinAppDriverTest\UITestDotNetCore\obj\Debug\netcoreapp3.1\UITest1.AssemblyInfoInputs.cache
 D:\AKIYAMA\WinAppDriverTest\UITestDotNetCore\obj\Debug\netcoreapp3.1\UITest1.AssemblyInfo.cs
@@ -462,3 +459,13 @@ D:\AKIYAMA\WinAppDriverTest\UITestDotNetCore\obj\Debug\netcoreapp3.1\UITest1.csp
 D:\AKIYAMA\WinAppDriverTest\UITestDotNetCore\obj\Debug\netcoreapp3.1\UITest1.dll
 D:\AKIYAMA\WinAppDriverTest\UITestDotNetCore\obj\Debug\netcoreapp3.1\UITest1.pdb
 D:\AKIYAMA\WinAppDriverTest\UITestDotNetCore\obj\Debug\netcoreapp3.1\UITest1.genruntimeconfig.cache
+D:\AKIYAMA\WinAppDriverTest\UITestDotNetCore\bin\Debug\netcoreapp3.1\UITest1.dll.config
+D:\AKIYAMA\WinAppDriverTest\UITestDotNetCore\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+D:\AKIYAMA\WinAppDriverTest\UITestDotNetCore\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+D:\AKIYAMA\WinAppDriverTest\UITestDotNetCore\bin\Debug\netcoreapp3.1\System.Security.Permissions.dll
+D:\AKIYAMA\WinAppDriverTest\UITestDotNetCore\bin\Debug\netcoreapp3.1\System.Windows.Extensions.dll
+D:\AKIYAMA\WinAppDriverTest\UITestDotNetCore\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\AKIYAMA\WinAppDriverTest\UITestDotNetCore\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\AKIYAMA\WinAppDriverTest\UITestDotNetCore\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\AKIYAMA\WinAppDriverTest\UITestDotNetCore\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\AKIYAMA\WinAppDriverTest\UITestDotNetCore\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll

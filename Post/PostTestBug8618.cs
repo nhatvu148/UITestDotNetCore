@@ -1,4 +1,6 @@
-﻿using OpenQA.Selenium;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Interactions;
 using System;
 using System.Collections.Generic;
@@ -13,50 +15,6 @@ using static UITest1.AkiyamaTool;
 
 namespace UITest1
 {
-    class CSVTool : JupiterTestBase
-    {
-        public static Collection<string[]> ReadCSVFile(string strFilePath, char charDelimiter)
-        {
-            Collection<string[]> cstrReturn = new Collection<string[]>();
-            StreamReader sr = new StreamReader(strFilePath);
-            string line;
-            string[] row;
-            while ((line = sr.ReadLine()) != null)
-            {
-                row = line.Split(charDelimiter);
-                cstrReturn.Add(row);
-            }
-            return cstrReturn;
-        }
-    }
-
-    class PostTool : JupiterTestBase
-    {
-        public static void ImportOp2(string strFilePath, double time_wait_for_import_s)
-        {
-            jupiter.FindElementByName("Import Results").Click();
-            Thread.Sleep(1000);
-            jupiter.FindElementByName("Nastran Op2").Click();
-            action = new Actions(Driver);
-            action.SendKeys(strFilePath);
-            action.SendKeys(Keys.Enter).Perform();
-            Thread.Sleep((int)(time_wait_for_import_s*1000));
-        }
-
-        public static void OpenRibbon(string[] strRibbon)
-        {
-            int nCnt = 0;
-            foreach (string strName in strRibbon)
-            {
-                if (nCnt++ == 0)
-                    toolBar.FindElementByName(strName).Click();
-                else
-                    jupiter.FindElementByName(strName).Click();
-                Thread.Sleep(1000);
-            }
-        }
-    }
-
     class PostTestBug8618 : JupiterTestBase
     {
         //Bug #8618:        Note > Point: Import from CSV has some errors.
@@ -74,7 +32,8 @@ namespace UITest1
 
             //Navigate to dialog
             string[] strRibbon = { "Tools", "Note", "Point" };
-            PostTool.OpenRibbon(strRibbon);
+            var DialogNote = PostTool.OpenRibbon(strRibbon);
+            Assert.IsNotNull(DialogNote);
 
             //Open from csv
             Driver.FindElementByName("Import from CSV").Click();
@@ -83,20 +42,36 @@ namespace UITest1
             DialogPositions.FindElementByAccessibilityId("5512").Click();
             Thread.Sleep(1000);
 
-            
-
             action = new Actions(Driver);
             action.SendKeys(strCSVFile);
             action.SendKeys(Keys.Enter).Perform();
             Thread.Sleep(1000);
 
-            action = new Actions(Driver);
-            action.MoveToElement(DialogPositions, 0, 0);
-            action.MoveByOffset(110, 110);
-            action.Click().Perform();
+            //Read data in table
+            var bigTable = DialogPositions.FindElementByAccessibilityId("5511");
+            var rows = bigTable.FindElementsByXPath("//child::*");
+            //var firstRow1 = bigTable.FindElementByXPath("//*[1]/following-sibling::*[1]");
+            foreach (var child in rows)
+            {
+                logger.Info(child.Text);
+            }
+            rows[8].Click();
+            double dActualValue = Convert.ToDouble(rows[8].Text);
 
+            //Close dialog
+            DialogPositions.FindElementByName("OK").Click();
+            Thread.Sleep(1000);
+            var DialogNote2 = Driver.FindElementByXPath("//Window[@Name=\"Note\"][@ClassName=\"#32770\"]");
+            Thread.Sleep(1000);
+            DialogNote2.FindElementByName("Close").Click();
+            Thread.Sleep(1000);
+
+            //Read expected value in csv file
             Collection<string[]> cstrAllData = CSVTool.ReadCSVFile(strCSVFile, ',');
             double dFirstValue = Convert.ToDouble(cstrAllData[0][0]);
+
+            //Compare the 2 values
+            Assert.AreEqual(dActualValue, dFirstValue);
 
             SaveAs(strActualFolder + "cube_actual.op2");
         }
